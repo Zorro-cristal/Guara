@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:guara2/layout/boton.dart';
+import 'package:guara2/rutas/rutas.dart';
 
 class Principal extends StatelessWidget {
   const Principal({super.key});
@@ -47,7 +48,7 @@ class Principal extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Boton(presionado: () => null, titulo: "Sugerencias/Ñembohape")
+                    Boton(presionado: () => navegar(context, 'Sugerencia'), titulo: "Sugerencias/Ñembohape")
                   ],
                 ),
               ],
