@@ -19,7 +19,7 @@ class Boton extends StatelessWidget {
           color: Colors.grey,
           borderRadius: BorderRadius.circular(35)),
       child: TextButton(
-        onPressed: presionado(),
+        onPressed: () => presionado(),
         /* onPressed: () {
           Navigator.push(context, 
             MaterialPageRoute(builder: (context) => EspanholGuaraniHome())
