@@ -24,7 +24,7 @@ class Principal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Boton(
-                        presionado: () => null, titulo: "Castellano a guarani")
+                      presionado: () => navegar(context, 'EspanholGuarani'), titulo: "Castellano a guarani")
                   ],
                 ),
                 Row(
