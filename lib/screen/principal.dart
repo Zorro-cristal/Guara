@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:guara2/layout/boton.dart';
 import 'package:guara2/rutas/rutas.dart';
+import 'package:guara2/styles/fondo_pantalla.dart';
 
 class Principal extends StatelessWidget {
   const Principal({super.key});
@@ -12,10 +13,7 @@ class Principal extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/principal.jpg"),
-                    fit: BoxFit.cover)),
+            decoration: Fondo_pantalla("principal"),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.stretch,
