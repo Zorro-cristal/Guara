@@ -3,6 +3,7 @@ import 'package:guara2/screen/espanholguara.dart';
 import 'package:guara2/screen/frases.dart';
 import 'package:guara2/screen/guara_espanhol.dart';
 import 'package:guara2/screen/principal.dart';
+import 'package:guara2/screen/saludos.dart';
 import 'package:guara2/screen/sugerencias.dart';
 
 void navegar(context, String destino) {
@@ -30,6 +31,31 @@ void navegar(context, String destino) {
     case 'Sugerencia':
       Navigator.push(context, 
         MaterialPageRoute(builder: (context) => Sugerencia())
+      );
+      break;
+    case 'Saludos':
+      Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => Saludos())
+      );
+      break;
+    case 'Presentaciones':
+      Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => Saludos())
+      );
+      break;
+    case 'Cortesia':
+      Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => Saludos())
+      );
+      break;
+    case 'Tiempos':
+      Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => Saludos())
+      );
+      break;
+    case 'Direciones':
+      Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => Saludos())
       );
       break;
     default:
