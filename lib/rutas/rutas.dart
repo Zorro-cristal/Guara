@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guara2/screen/espanholguara.dart';
+import 'package:guara2/screen/frases.dart';
 import 'package:guara2/screen/guara_espanhol.dart';
 import 'package:guara2/screen/principal.dart';
 import 'package:guara2/screen/sugerencias.dart';
@@ -23,7 +24,7 @@ void navegar(context, String destino) {
       break;
     case 'Frases':
       Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => EspanholGuara())
+        MaterialPageRoute(builder: (context) => Frases())
       );
       break;
     case 'Sugerencia':

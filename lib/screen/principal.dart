@@ -41,7 +41,7 @@ class Principal extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Boton(presionado: () => null, titulo: "Frases")],
+                  children: [Boton(presionado: () => navegar(context, "Frases"), titulo: "Frases")],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
