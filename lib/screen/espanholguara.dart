@@ -1,10 +1,6 @@
-import 'dart:convert';
-import 'dart:ffi';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:guara2/components/lista_palabras.dart';
 import 'package:guara2/styles/entrada_texto.dart';
-import '../config/palabras.dart';
 
 class EspanholGuara extends StatefulWidget {
   const EspanholGuara({super.key});
@@ -14,31 +10,6 @@ class EspanholGuara extends StatefulWidget {
 }
 
 class _EspanholGuaraState extends State<EspanholGuara> {
-  /* late List<Palabra> listaPalabras;
-  late List<Palabra> palabraDisplay;
-
-  static Future <List<Palabra>> loadJsonData() async {
-    var palabras;
-    var response= await rootBundle.loadString('bdd/palabra.json');
-    var datasJson= json.decode(response);
-    for (var dataJson in datasJson) {
-      palabras.add(Palabra.fromJson(dataJson));
-    }
-    return palabras;
-  }
-
-
-  @override
-  void initState () {
-    EspanholGuara.loadJsonData().then((value){
-      setState(() {
-        listaPalabras.addAll(value);
-        palabraDisplay= listaPalabras;
-      });
-    });
-    super.initState();
-  }
- */
   @override
   Widget build(BuildContext context) {
     return Scaffold(
