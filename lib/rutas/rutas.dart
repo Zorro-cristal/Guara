@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guara2/screen/espanholguara.dart';
 import 'package:guara2/screen/frases.dart';
 import 'package:guara2/screen/guara_espanhol.dart';
+import 'package:guara2/screen/presentaciones.dart';
 import 'package:guara2/screen/principal.dart';
 import 'package:guara2/screen/saludos.dart';
 import 'package:guara2/screen/sugerencias.dart';
@@ -40,7 +41,7 @@ void navegar(context, String destino) {
       break;
     case 'Presentaciones':
       Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Saludos())
+        MaterialPageRoute(builder: (context) => Presentaciones())
       );
       break;
     case 'Cortesia':
