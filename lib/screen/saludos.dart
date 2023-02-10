@@ -6,6 +6,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:guara2/config/palabras.dart';
 
+import '../config/get_info.dart';
+
 class Saludos extends StatefulWidget {
   const Saludos({super.key});
 
@@ -16,20 +18,9 @@ class Saludos extends StatefulWidget {
 class _SaludosState extends State<Saludos> {
   List<Palabra> listaPalabras = List.empty(growable: true);
 
-  static Future<List<Palabra>> loadJsonData() async {
-    List<Palabra> palabras = List.empty(growable: true);
-    var response = await rootBundle.loadString('bdd/saludos.json');
-    var datasJson = json.decode(response);
-    for (var dataJson in datasJson) {
-      var pal = Palabra.fromJson(dataJson);
-      palabras.add(pal);
-    }
-    return palabras;
-  }
-
   @override
   void initState() {
-    loadJsonData().then((value) {
+    loadJsonData('bdd/saludos.json').then((value) {
       setState(() {
         listaPalabras.addAll(value);
       });
