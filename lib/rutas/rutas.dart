@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guara2/screen/frases/cortesia.dart';
+import 'package:guara2/screen/frases/tiempos.dart';
 import 'package:guara2/screen/principal/espanholguara.dart';
 import 'package:guara2/screen/menus/frases.dart';
 import 'package:guara2/screen/principal/guara_espanhol.dart';
@@ -52,7 +53,7 @@ void navegar(context, String destino) {
       break;
     case 'Tiempos':
       Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Saludos())
+        MaterialPageRoute(builder: (context) => Tiempos())
       );
       break;
     case 'Direciones':

@@ -41,7 +41,7 @@ class Frases extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Boton(presionado: () {}, titulo: "Tiempos"),
+                Boton(presionado: () => navegar(context, "Tiempos"), titulo: "Tiempos"),
               ],
             ),
             Container(height: 20),
