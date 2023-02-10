@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:guara2/config/palabras.dart';
 
-import '../config/get_info.dart';
+import '../../config/get_info.dart';
 
 class Saludos extends StatefulWidget {
   const Saludos({super.key});

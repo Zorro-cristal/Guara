@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:guara2/screen/espanholguara.dart';
-import 'package:guara2/screen/frases.dart';
-import 'package:guara2/screen/guara_espanhol.dart';
-import 'package:guara2/screen/presentaciones.dart';
-import 'package:guara2/screen/principal.dart';
-import 'package:guara2/screen/saludos.dart';
-import 'package:guara2/screen/sugerencias.dart';
+import 'package:guara2/screen/principal/espanholguara.dart';
+import 'package:guara2/screen/menus/frases.dart';
+import 'package:guara2/screen/principal/guara_espanhol.dart';
+import 'package:guara2/screen/frases/presentaciones.dart';
+import 'package:guara2/screen/menus/principal.dart';
+import 'package:guara2/screen/frases/saludos.dart';
+import 'package:guara2/screen/principal/sugerencias.dart';
 
 void navegar(context, String destino) {
   switch (destino) {
