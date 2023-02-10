@@ -1,20 +1,9 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:guara2/config/palabras.dart';
+import '../../config/get_info.dart';
 
 class Presentaciones extends StatefulWidget {
   const Presentaciones({super.key});
-
-  static Future<List<Palabra>> loadJsonData() async {
-    List<Palabra> palabras = List.empty(growable: true);
-    var response = await rootBundle.loadString('bdd/presentacion.json');
-    var datasJson = json.decode(response);
-    for (var dataJson in datasJson) {
-      palabras.add(Palabra.fromJson(dataJson));
-    }
-    return palabras;
-  }
 
   @override
   State<Presentaciones> createState() => _PresentacionesState();
@@ -25,7 +14,7 @@ class _PresentacionesState extends State<Presentaciones> {
 
   @override
   void initState() {
-    Presentaciones.loadJsonData().then((value) {
+    loadJsonData('bdd/presentacion.json').then((value) {
       setState(() {
         presentacion.addAll(value);
       });
