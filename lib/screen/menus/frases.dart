@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:guara2/layout/boton.dart';
 import 'package:guara2/rutas/rutas.dart';
 import 'package:guara2/styles/fondo_pantalla.dart';
@@ -48,7 +46,7 @@ class Frases extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Boton(presionado: () {}, titulo: "Direcciones"),
+                Boton(presionado: () => navegar(context, "Direcciones"), titulo: "Direcciones"),
               ],
             )
           ],
