@@ -8,6 +8,7 @@ import 'package:guara2/screen/principal/guara_espanhol.dart';
 import 'package:guara2/screen/frases/presentaciones.dart';
 import 'package:guara2/screen/menus/principal.dart';
 import 'package:guara2/screen/frases/saludos.dart';
+import 'package:guara2/screen/principal/numeros.dart';
 import 'package:guara2/screen/principal/sugerencias.dart';
 
 void navegar(context, String destino) {
@@ -22,9 +23,9 @@ void navegar(context, String destino) {
         MaterialPageRoute(builder: (context) => GuaraEspanhol())
       );
       break;
-    case 'NumerosHome':
+    case 'Numeros':
       Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => EspanholGuara())
+        MaterialPageRoute(builder: (context) => Numeros())
       );
       break;
     case 'Frases':
