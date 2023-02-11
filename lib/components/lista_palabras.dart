@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:guara2/config/capitalizar.dart';
 import '../config/get_info.dart';
 import '../config/palabras.dart';
 
@@ -48,8 +49,8 @@ class _Lista_palabrasState extends State<Lista_palabras> {
                       children: [
                         Text(
                           widget.idioma == 'c'
-                              ? palabraDisplay[index].castellano
-                              : palabraDisplay[index].guarani,
+                              ? capitalizar(palabraDisplay[index].castellano)
+                              : capitalizar(palabraDisplay[index].guarani),
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         )
