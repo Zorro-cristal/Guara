@@ -39,7 +39,7 @@ class Principal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Boton(
-                        presionado: () => navegar(context, 'Numeros '),
+                        presionado: () => navegar(context, 'Numeros'),
                         titulo: "Numeros/Papaha")
                   ],
                 ),
