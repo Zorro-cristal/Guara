@@ -9,7 +9,7 @@ class Boton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
+      width: 375,
       decoration: BoxDecoration(
           border: Border.all(
             //color: Colors.blue[900],
