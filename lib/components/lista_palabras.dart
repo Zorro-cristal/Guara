@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:guara2/config/capitalizar.dart';
+import 'package:guara2/screen/info_palabra.dart';
 import '../config/get_info.dart';
 import '../config/palabras.dart';
 
@@ -41,7 +42,9 @@ class _Lista_palabrasState extends State<Lista_palabras> {
           padding: EdgeInsets.all(10),
           itemCount: palabraDisplay.length,
           itemBuilder: (context, index) => GestureDetector(
-                onTap: () async {},
+                onTap: () => Navigator.push(context, 
+                  MaterialPageRoute(builder: (context) => Info_palabra(palabras: palabraDisplay[index]))
+                ),
                 child: Card(
                   child: Padding(
                     padding: EdgeInsets.all(10),
