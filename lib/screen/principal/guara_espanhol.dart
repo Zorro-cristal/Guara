@@ -1,7 +1,4 @@
-import 'dart:convert';
-import 'dart:ffi';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:guara2/components/lista_palabras.dart';
 import 'package:guara2/styles/entrada_texto.dart';
 

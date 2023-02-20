@@ -1,10 +1,4 @@
-import 'dart:convert';
-import 'dart:ffi';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:guara2/config/capitalizar.dart';
 import 'package:guara2/screen/info_palabra.dart';
 import '../config/get_info.dart';
