@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guara2/config/capitalizar.dart';
 import 'package:guara2/styles/fondo_pantalla.dart';
 import '../config/palabras.dart';
+import 'package:guara2/components/busqueda.dart';
 
 class Info_palabra extends StatefulWidget {
   Palabra palabras;
@@ -51,6 +52,7 @@ class _Info_palabraState extends State<Info_palabra> {
                         ),
                       )),
                 ),
+                Busqueda(palabra: widget.palabras.castellano),
               ],
             )),
       ),
