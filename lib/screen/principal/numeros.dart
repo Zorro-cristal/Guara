@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../config/get_info.dart';
-import '../../config/palabras.dart';
+import '../../modelos/palabras.dart';
 
 class Numeros extends StatefulWidget {
   const Numeros({super.key});

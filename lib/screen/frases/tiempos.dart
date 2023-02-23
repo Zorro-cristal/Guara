@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import '../../config/get_info.dart';
-import '../../config/palabras.dart';
+import '../../modelos/palabras.dart';
 
 class Tiempos extends StatefulWidget {
   const Tiempos({super.key});

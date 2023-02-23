@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:guara2/config/palabras.dart';
+import 'package:guara2/modelos/palabras.dart';
 
 Future<List<Palabra>> loadJsonData(String ruta) async {
   List<Palabra> palabras = List.empty(growable: true);

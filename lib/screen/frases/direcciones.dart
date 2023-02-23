@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../../config/get_info.dart';
-import '../../config/palabras.dart';
+import '../../modelos/palabras.dart';
 
 class Direcciones extends StatefulWidget {
   const Direcciones({super.key});
