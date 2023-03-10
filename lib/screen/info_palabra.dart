@@ -23,7 +23,7 @@ class _Info_palabraState extends State<Info_palabra> {
         child: Container(
             decoration: Fondo_pantalla("info_castellano"),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Card(
@@ -52,6 +52,7 @@ class _Info_palabraState extends State<Info_palabra> {
                         ),
                       )),
                 ),
+                SizedBox(height: 50),
                 Busqueda(palabra: widget.palabras.castellano),
               ],
             )),

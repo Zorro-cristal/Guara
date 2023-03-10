@@ -32,7 +32,13 @@ class _BusquedaState extends State<Busqueda> {
     var cliente = clientViaApiKey(api_key_token);
     var api = new CustomSearchApi(cliente);
     var buscador = api.cse
-        .list(cx: motor_busqueda, q: widget.palabra, hl: "es", hq: "definicion", siteSearch: "rae.es", siteSearchFilter: "i")
+        .list(
+            cx: motor_busqueda,
+            q: widget.palabra,
+            hl: "es",
+            hq: "definicion",
+            siteSearch: "rae.es",
+            siteSearchFilter: "i")
         .then((Search busq) {
       if (busq.items != null) {
         // Obtenemos el primer resultado
@@ -41,9 +47,16 @@ class _BusquedaState extends State<Busqueda> {
             url: busq.items![0].link,
             snippet: busq.items![0].snippet);
         setState(() {
-          deficinion = resultado.definicion();
+          if (resultado
+              .definicion()
+              .contains('Diccionario de la lengua española: ')) {
+            var pos = resultado.definicion().indexOf('la: ') + 3;
+            deficinion = resultado.definicion().substring(pos);
+          } else {
+            deficinion = resultado.definicion();
+          }
         });
-        for (var result in busq.items!) {
+        /* for (var result in busq.items!) {
           print(result.snippet);
           if (!sustant &&
               (result.snippet!.contains("sustantivo") ||
@@ -53,6 +66,11 @@ class _BusquedaState extends State<Busqueda> {
               sustant = true;
             });
           }
+        } */
+        if (busq.items![0].snippet!.contains("m.")) {
+          setState(() {
+            sustant = true;
+          });
         }
         print(sustant);
       }
@@ -63,7 +81,8 @@ class _BusquedaState extends State<Busqueda> {
             q: widget.palabra,
             hl: "es",
             hq: "fotos",
-            searchType: "image", imgSize: "large")
+            searchType: "image",
+            imgSize: "large")
         .then((Search busq) {
       if (busq.items != null) {
         resultado = Paquete_google_search(
@@ -88,8 +107,20 @@ class _BusquedaState extends State<Busqueda> {
     return Card(
         color: Colors.blue,
         child: Column(children: [
-          Text(deficinion),
-          imagen != "" && imagen != null ? Image.network(imagen) : Container(),
+          Text(
+            deficinion, style: const TextStyle(
+              fontSize: 25.0,
+              fontStyle: FontStyle.italic
+            ),
+          ),
+          imagen != "" && imagen != null && sustant ? Container(
+            height: 300,
+            child: Image.network(
+              imagen,
+              fit: BoxFit.fitHeight,
+            ),
+          ) : Container(),
+          
         ]));
   }
 }
