@@ -10,10 +10,12 @@ class GuaraEspanhol extends StatefulWidget {
 }
 
 class _GuaraEspanholState extends State<GuaraEspanhol> {
+  String pal= '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Español a Guarani')),
+      appBar: AppBar(title: Text('Guaranigui Españolpe')),
       body: SafeArea(child: Container(
         decoration: BoxDecoration(
           color: Colors.grey[100]
@@ -47,17 +49,12 @@ class _GuaraEspanholState extends State<GuaraEspanhol> {
                             labelText: "Palabra/Ñe'ẽ",
                             labelStyle: TextStyle(color: Colors.black54)
                           ),
-                          /* onChange: (texto) => {
-                            texto= texto.toLowerCase();
-                            setState(
-                              () => palabraDisplay= listaPalabra.where(
-                                (palabra) {
-                                  var elemento= palabra.castellano.toLowerCase();
-                                  return elemento.constrains(texto);
-                                }
-                              ).toList()
-                            )
-                          } */
+                          onChanged: (texto) => {
+                                      texto = texto..toLowerCase(),
+                                      setState(() {
+                                        pal = texto;
+                                      }),
+                                    }
                         ),
                       ),
                     )
@@ -65,7 +62,7 @@ class _GuaraEspanholState extends State<GuaraEspanhol> {
                 ),
               ),
             ),           
-            Lista_palabras(idioma: 'g'),
+            Lista_palabras(idioma: 'g', palabra: pal,),
           ],
         ),
       ),)
