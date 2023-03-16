@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:guara2/components/lista_palabras.dart';
-import 'package:guara2/styles/entrada_texto.dart';
+import 'package:guara/components/lista_palabras.dart';
+import 'package:guara/styles/entrada_texto.dart';
 
 class EspanholGuara extends StatefulWidget {
   const EspanholGuara({super.key});
@@ -10,7 +10,7 @@ class EspanholGuara extends StatefulWidget {
 }
 
 class _EspanholGuaraState extends State<EspanholGuara> {
-  String pal= '';
+  String pal = '';
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,10 @@ class _EspanholGuaraState extends State<EspanholGuara> {
                     ),
                   ),
                 ),
-                Lista_palabras(idioma: 'c', palabra: pal,),
+                Lista_palabras(
+                  idioma: 'c',
+                  palabra: pal,
+                ),
               ],
             ),
           ),

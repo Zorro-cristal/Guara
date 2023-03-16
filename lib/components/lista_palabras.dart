@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:guara2/config/capitalizar.dart';
-import 'package:guara2/screen/info_palabra.dart';
+import 'package:guara/config/capitalizar.dart';
+import 'package:guara/screen/info_palabra.dart';
 import '../config/get_info.dart';
 import '../modelos/palabras.dart';
 import '../config/filtro_palabras.dart';

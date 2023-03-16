@@ -1,71 +1,60 @@
 import 'package:flutter/material.dart';
-import 'package:guara2/screen/frases/cortesia.dart';
-import 'package:guara2/screen/frases/direcciones.dart';
-import 'package:guara2/screen/frases/tiempos.dart';
-import 'package:guara2/screen/principal/espanholguara.dart';
-import 'package:guara2/screen/menus/frases.dart';
-import 'package:guara2/screen/principal/guara_espanhol.dart';
-import 'package:guara2/screen/frases/presentaciones.dart';
-import 'package:guara2/screen/menus/principal.dart';
-import 'package:guara2/screen/frases/saludos.dart';
-import 'package:guara2/screen/principal/numeros.dart';
-import 'package:guara2/screen/principal/sugerencias.dart';
+import 'package:guara/screen/frases/cortesia.dart';
+import 'package:guara/screen/frases/direcciones.dart';
+import 'package:guara/screen/frases/tiempos.dart';
+import 'package:guara/screen/principal/espanholguara.dart';
+import 'package:guara/screen/menus/frases.dart';
+import 'package:guara/screen/principal/guara_espanhol.dart';
+import 'package:guara/screen/frases/presentaciones.dart';
+import 'package:guara/screen/menus/principal.dart';
+import 'package:guara/screen/frases/saludos.dart';
+import 'package:guara/screen/principal/numeros.dart';
+import 'package:guara/screen/principal/sugerencias.dart';
 
 void navegar(context, String destino) {
   switch (destino) {
     case 'EspanholGuarani':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => EspanholGuara())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => EspanholGuara()));
       break;
     case 'GuaraniEspanhol':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => GuaraEspanhol())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => GuaraEspanhol()));
       break;
     case 'Numeros':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Numeros())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Numeros()));
       break;
     case 'Frases':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Frases())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Frases()));
       break;
     case 'Sugerencia':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Sugerencia())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Sugerencia()));
       break;
     case 'Saludos':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Saludos())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Saludos()));
       break;
     case 'Presentaciones':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Presentaciones())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Presentaciones()));
       break;
     case 'Cortesia':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Cortesia())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Cortesia()));
       break;
     case 'Tiempos':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Tiempos())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Tiempos()));
       break;
     case 'Direcciones':
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Direcciones())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Direcciones()));
       break;
     default:
-      Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => Principal())
-      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Principal()));
   }
 }

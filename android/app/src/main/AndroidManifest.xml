@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.guara2">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="guara2"
+        android:label="Diccionario Guarani-Castellano"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

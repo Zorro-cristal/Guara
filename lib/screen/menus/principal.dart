@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:guara2/layout/boton.dart';
-import 'package:guara2/rutas/rutas.dart';
-import 'package:guara2/styles/fondo_pantalla.dart';
+import 'package:guara/layout/boton.dart';
+import 'package:guara/rutas/rutas.dart';
+import 'package:guara/styles/fondo_pantalla.dart';
 
 class Principal extends StatelessWidget {
   const Principal({super.key});

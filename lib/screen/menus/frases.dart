@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:guara2/layout/boton.dart';
-import 'package:guara2/rutas/rutas.dart';
-import 'package:guara2/styles/fondo_pantalla.dart';
+import 'package:guara/layout/boton.dart';
+import 'package:guara/rutas/rutas.dart';
+import 'package:guara/styles/fondo_pantalla.dart';
 
 class Frases extends StatelessWidget {
   const Frases({super.key});
@@ -9,7 +9,8 @@ class Frases extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Container(
+      body: SafeArea(
+          child: Container(
         decoration: Fondo_pantalla("frases"),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,35 +19,45 @@ class Frases extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Boton(presionado: () => navegar(context, "Saludos"), titulo: "Saludos"),
+                Boton(
+                    presionado: () => navegar(context, "Saludos"),
+                    titulo: "Saludos"),
               ],
             ),
             Container(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Boton(presionado: () => navegar(context, "Presentaciones"), titulo: "Presentaciones"),
+                Boton(
+                    presionado: () => navegar(context, "Presentaciones"),
+                    titulo: "Presentaciones"),
               ],
             ),
             Container(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Boton(presionado: () => navegar(context, "Cortesia"), titulo: "Costesia"),
+                Boton(
+                    presionado: () => navegar(context, "Cortesia"),
+                    titulo: "Costesia"),
               ],
             ),
             Container(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Boton(presionado: () => navegar(context, "Tiempos"), titulo: "Tiempos"),
+                Boton(
+                    presionado: () => navegar(context, "Tiempos"),
+                    titulo: "Tiempos"),
               ],
             ),
             Container(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Boton(presionado: () => navegar(context, "Direcciones"), titulo: "Direcciones"),
+                Boton(
+                    presionado: () => navegar(context, "Direcciones"),
+                    titulo: "Direcciones"),
               ],
             )
           ],

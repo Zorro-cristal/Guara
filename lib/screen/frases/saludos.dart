@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:guara2/modelos/palabras.dart';
+import 'package:guara/modelos/palabras.dart';
 
 import '../../config/get_info.dart';
 
@@ -32,41 +32,41 @@ class _SaludosState extends State<Saludos> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Saludos")),
-      body: SafeArea(child: Container(
+      body: SafeArea(
+          child: Container(
         decoration: BoxDecoration(color: Colors.blueGrey[100]),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(child: ListView.builder(
+            Expanded(
+                child: ListView.builder(
               padding: EdgeInsets.all(10.0),
               itemCount: listaPalabras.length,
               itemBuilder: (BuildContext context, int index) {
                 return Card(
-                    color: Colors.blue[200],
-                    elevation: 10,
-                    margin: EdgeInsets.all(6),
-                    child: Padding(
+                  color: Colors.blue[200],
+                  elevation: 10,
+                  margin: EdgeInsets.all(6),
+                  child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: 
-                        ListTile(
-                          title: Text(
-                            listaPalabras[index].guarani,
-                            style: TextStyle(
-                              fontSize: 30,
-                            ),
+                      child: ListTile(
+                        title: Text(
+                          listaPalabras[index].guarani,
+                          style: TextStyle(
+                            fontSize: 30,
                           ),
-                          contentPadding: EdgeInsets.all(8),
-                          subtitle: Text(
-                            listaPalabras[index].castellano,
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontStyle: FontStyle.italic,
-                            ),
+                        ),
+                        contentPadding: EdgeInsets.all(8),
+                        subtitle: Text(
+                          listaPalabras[index].castellano,
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontStyle: FontStyle.italic,
                           ),
-                        )
-                    ),
-                  );
+                        ),
+                      )),
+                );
               },
             )),
           ],

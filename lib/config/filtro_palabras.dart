@@ -1,4 +1,4 @@
-import 'package:guara2/modelos/palabras.dart';
+import 'package:guara/modelos/palabras.dart';
 
 List<Palabra> filtrar(List<Palabra> origin, String filtro, String idioma) {
   if (idioma == 'c') {
