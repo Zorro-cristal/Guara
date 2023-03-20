@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guara/components/publicidad.dart';
 import '../../config/get_info.dart';
 import '../../modelos/palabras.dart';
 
@@ -14,6 +15,7 @@ class _CortesiaState extends State<Cortesia> {
 
   @override
   void initState() {
+    Public_pantalla_compl().cargaAd();
     loadJsonData('bdd/cortesia.json').then((value) {
       setState(() {
         cortesia.addAll(value);
@@ -66,7 +68,8 @@ class _CortesiaState extends State<Cortesia> {
                         )),
                   );
                 },
-              ))
+              )),
+              Publicidad_inferior(),
             ],
           ),
         )));

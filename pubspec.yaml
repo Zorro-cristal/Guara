@@ -39,6 +39,7 @@ dependencies:
   flutter_email_sender: ^5.2.0
   googleapis: ^10.1.0
   googleapis_auth:
+  google_mobile_ads: ^2.3.0
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:guara/components/publicidad.dart';
 import 'package:guara/modelos/palabras.dart';
 
 import '../../config/get_info.dart';
@@ -20,6 +21,7 @@ class _SaludosState extends State<Saludos> {
 
   @override
   void initState() {
+    Public_pantalla_compl().cargaAd();
     loadJsonData('bdd/saludos.json').then((value) {
       setState(() {
         listaPalabras.addAll(value);
@@ -69,6 +71,7 @@ class _SaludosState extends State<Saludos> {
                 );
               },
             )),
+            Publicidad_inferior()
           ],
         ),
       )),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guara/components/lista_palabras.dart';
+import 'package:guara/components/publicidad.dart';
 import 'package:guara/styles/entrada_texto.dart';
 
 class GuaraEspanhol extends StatefulWidget {

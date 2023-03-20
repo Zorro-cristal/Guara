@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guara/components/publicidad.dart';
 
 import '../../config/get_info.dart';
 import '../../modelos/palabras.dart';
@@ -20,9 +21,9 @@ class _NumerosState extends State<Numeros> {
         numeros.addAll(value);
       });
     });
+    Public_pantalla_compl().cargaAd();
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +69,7 @@ class _NumerosState extends State<Numeros> {
                   },
                 ),
               ),
+              Publicidad_inferior(),
             ],
           ),
         ),

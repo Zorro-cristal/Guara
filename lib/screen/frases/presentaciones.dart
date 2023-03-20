@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guara/components/publicidad.dart';
 import 'package:guara/modelos/palabras.dart';
 import '../../config/get_info.dart';
 
@@ -14,6 +15,7 @@ class _PresentacionesState extends State<Presentaciones> {
 
   @override
   void initState() {
+    Public_pantalla_compl().cargaAd();
     loadJsonData('bdd/presentacion.json').then((value) {
       setState(() {
         presentacion.addAll(value);
@@ -67,7 +69,7 @@ class _PresentacionesState extends State<Presentaciones> {
                   );
                 },
               )),
-              Container(height: 75)
+              Publicidad_inferior(),
             ],
           ),
         )));

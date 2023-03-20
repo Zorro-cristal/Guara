@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:guara/components/publicidad.dart';
 
 import '../../config/get_info.dart';
 import '../../modelos/palabras.dart';
@@ -17,6 +18,7 @@ class _DireccionesState extends State<Direcciones> {
 
   @override
   void initState () {
+    Public_pantalla_compl().cargaAd();
     loadJsonData('bdd/direcciones.json').then((value){
       setState(() {
         direcciones.addAll(value);
@@ -70,9 +72,7 @@ class _DireccionesState extends State<Direcciones> {
                   );
               },
             )),
-            Container(
-              height: 75
-            )
+            Publicidad_inferior(),
           ],
         ),
       ))

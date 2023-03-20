@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
+import 'package:guara/components/publicidad.dart';
 import '../../config/get_info.dart';
 import '../../modelos/palabras.dart';
 
@@ -17,6 +15,7 @@ class _TiemposState extends State<Tiempos> {
 
   @override
   void initState () {
+    Public_pantalla_compl().cargaAd();
     loadJsonData('bdd/momentos.json').then((value){
       setState(() {
         momentos.addAll(value);
@@ -70,9 +69,7 @@ class _TiemposState extends State<Tiempos> {
                   );
               },
             )),
-            Container(
-              height: 75
-            )
+            Publicidad_inferior()
           ],
         ),
       ))

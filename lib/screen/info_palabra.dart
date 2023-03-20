@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guara/components/publicidad.dart';
 import 'package:guara/config/capitalizar.dart';
 import 'package:guara/styles/fondo_pantalla.dart';
 import '../modelos/palabras.dart';
@@ -23,37 +24,43 @@ class _Info_palabraState extends State<Info_palabra> {
         child: Container(
             decoration: Fondo_pantalla("info_castellano"),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                Card(
-                  child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Center(
-                        child: SelectableText.rich(
-                          //textAlign: TextAlign.center,
-                          TextSpan(
-                              style: DefaultTextStyle.of(context).style,
-                              children: <TextSpan>[
-                                TextSpan(
-                                    text:
-                                        capitalizar(widget.palabras.castellano),
-                                    style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.bold)),
-                                TextSpan(
-                                    text: '\n',
-                                    style: TextStyle(fontSize: 15.0)),
-                                TextSpan(
-                                    text: capitalizar(widget.palabras.guarani),
-                                    style: TextStyle(color: Colors.black))
-                              ]),
-                        ),
-                      )),
+              children: [
+                Column(
+                  children: <Widget>[
+                    Card(
+                      child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Center(
+                            child: SelectableText.rich(
+                              //textAlign: TextAlign.center,
+                              TextSpan(
+                                  style: DefaultTextStyle.of(context).style,
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                        text: capitalizar(
+                                            widget.palabras.castellano),
+                                        style: TextStyle(
+                                            color: Colors.grey,
+                                            fontSize: 30,
+                                            fontWeight: FontWeight.bold)),
+                                    TextSpan(
+                                        text: '\n',
+                                        style: TextStyle(fontSize: 15.0)),
+                                    TextSpan(
+                                        text: capitalizar(
+                                            widget.palabras.guarani),
+                                        style: TextStyle(color: Colors.black))
+                                  ]),
+                            ),
+                          )),
+                    ),
+                    SizedBox(height: 50),
+                    Busqueda(palabra: widget.palabras.castellano),
+                    Publicidad_inferior(),
+                  ],
                 ),
-                SizedBox(height: 50),
-                Busqueda(palabra: widget.palabras.castellano),
               ],
             )),
       ),
