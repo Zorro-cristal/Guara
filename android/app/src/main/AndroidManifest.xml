@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.guara2">
+    package="com.guaitenho.guara2">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="Diccionario Guarani-Castellano"
