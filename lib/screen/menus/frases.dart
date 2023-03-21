@@ -21,7 +21,8 @@ class Frases extends StatelessWidget {
               children: [
                 Boton(
                     presionado: () => navegar(context, "Saludos"),
-                    titulo: "Saludos"),
+                    titulo: "Saludos",
+                    semantica: 'Frases de saludo',),
               ],
             ),
             Container(height: 20),
@@ -30,7 +31,8 @@ class Frases extends StatelessWidget {
               children: [
                 Boton(
                     presionado: () => navegar(context, "Presentaciones"),
-                    titulo: "Presentaciones"),
+                    titulo: "Presentaciones",
+                    semantica: 'Frases para presentarse',),
               ],
             ),
             Container(height: 20),
@@ -39,7 +41,8 @@ class Frases extends StatelessWidget {
               children: [
                 Boton(
                     presionado: () => navegar(context, "Cortesia"),
-                    titulo: "Costesia"),
+                    titulo: "Costesia",
+                    semantica: 'Frases de cortesia',),
               ],
             ),
             Container(height: 20),
@@ -48,7 +51,8 @@ class Frases extends StatelessWidget {
               children: [
                 Boton(
                     presionado: () => navegar(context, "Tiempos"),
-                    titulo: "Tiempos"),
+                    titulo: "Tiempos",
+                    semantica: 'Frases para señalar momentos del dia',),
               ],
             ),
             Container(height: 20),
@@ -57,7 +61,8 @@ class Frases extends StatelessWidget {
               children: [
                 Boton(
                     presionado: () => navegar(context, "Direcciones"),
-                    titulo: "Direcciones"),
+                    titulo: "Direcciones",
+                    semantica: 'Frases para usar con direcciones',),
               ],
             )
           ],

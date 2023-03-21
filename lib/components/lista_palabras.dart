@@ -44,43 +44,50 @@ class _Lista_palabrasState extends State<Lista_palabras> {
           itemBuilder: (context, index) {
             return Column(children: [
               index % 5 == 0 ? Publicidad_inferior() : Container(),
-              GestureDetector(
-                  onTap: () {
-                    cont++;
-                    if (cont == 2) {
-                      cont = 0;
-                      Public_pantalla_compl().cargaAd();
-                    }
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                Info_palabra(palabras: palabraDisplay[index])));
-                  },
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: 65,
-                    child: Card(
-                      elevation: 7.5,
-                      child: Padding(
-                        padding: EdgeInsets.all(15),
-                        child: Column(
-                          children: [
-                            Text(
-                              widget.idioma == 'c'
-                                  ? capitalizar(
-                                      palabraDisplay[index].castellano)
-                                  : capitalizar(palabraDisplay[index].guarani),
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ],
+              Semantics(
+                hint: 'En guarani es ' +
+                    palabraDisplay[index].guarani +
+                    'y en castellano es ' +
+                    palabraDisplay[index].castellano,
+                child: GestureDetector(
+                    onTap: () {
+                      cont++;
+                      if (cont == 2) {
+                        cont = 0;
+                        Public_pantalla_compl().cargaAd();
+                      }
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Info_palabra(
+                                  palabras: palabraDisplay[index])));
+                    },
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 65,
+                      child: Card(
+                        elevation: 7.5,
+                        child: Padding(
+                          padding: EdgeInsets.all(15),
+                          child: Column(
+                            children: [
+                              Text(
+                                widget.idioma == 'c'
+                                    ? capitalizar(
+                                        palabraDisplay[index].castellano)
+                                    : capitalizar(
+                                        palabraDisplay[index].guarani),
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  )),
+                    )),
+              ),
             ]);
           }),
     );

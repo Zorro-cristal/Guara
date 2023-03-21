@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guara/components/publicidad.dart';
+import 'package:guara/layout/tarjeta_trad.dart';
 import '../../config/get_info.dart';
 import '../../modelos/palabras.dart';
 
@@ -42,31 +43,7 @@ class _TiemposState extends State<Tiempos> {
               padding: EdgeInsets.all(10.0),
               itemCount: momentos.length,
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                    color: Colors.blue[200],
-                    elevation: 10,
-                    margin: EdgeInsets.all(6),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: 
-                        ListTile(
-                          title: Text(
-                            momentos[index].guarani,
-                            style: TextStyle(
-                              fontSize: 30,
-                            ),
-                          ),
-                          contentPadding: EdgeInsets.all(8),
-                          subtitle: Text(
-                            momentos[index].castellano,
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontStyle: FontStyle.italic,
-                            ),
-                          ),
-                        )
-                    ),
-                  );
+                return Tarjeta_traduccion(palabra: momentos[index]);
               },
             )),
             Publicidad_inferior()

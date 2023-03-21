@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guara/components/publicidad.dart';
+import 'package:guara/layout/tarjeta_trad.dart';
 import 'package:guara/modelos/palabras.dart';
 import '../../config/get_info.dart';
 
@@ -44,29 +45,7 @@ class _PresentacionesState extends State<Presentaciones> {
                 padding: EdgeInsets.all(10.0),
                 itemCount: presentacion.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return Card(
-                    color: Colors.blue[200],
-                    elevation: 10,
-                    margin: EdgeInsets.all(6),
-                    child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: ListTile(
-                          title: Text(
-                            presentacion[index].guarani,
-                            style: TextStyle(
-                              fontSize: 30,
-                            ),
-                          ),
-                          contentPadding: EdgeInsets.all(8),
-                          subtitle: Text(
-                            presentacion[index].castellano,
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontStyle: FontStyle.italic,
-                            ),
-                          ),
-                        )),
-                  );
+                  return Tarjeta_traduccion(palabra: presentacion[index]);
                 },
               )),
               Publicidad_inferior(),

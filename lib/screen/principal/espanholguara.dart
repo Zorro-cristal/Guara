@@ -44,6 +44,7 @@ class _EspanholGuaraState extends State<EspanholGuara> {
                             child: TextField(
                                 style: Disenho_Entrada_texto,
                                 decoration: InputDecoration(
+                                    hintText: 'Ingresa una palabra en castellano para ser buscada',
                                     border: OutlineInputBorder(),
                                     labelText: "Palabra/Ñe'ẽ",
                                     labelStyle:

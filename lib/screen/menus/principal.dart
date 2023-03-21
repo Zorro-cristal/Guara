@@ -21,8 +21,10 @@ class Principal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Boton(
-                        presionado: () => navegar(context, 'EspanholGuarani'),
-                        titulo: "Castellano a guarani")
+                      presionado: () => navegar(context, 'EspanholGuarani'),
+                      titulo: "Castellano a guarani",
+                      semantica: 'Traducir de castellano a guarani',
+                    )
                   ],
                 ),
                 Container(height: distancia),
@@ -30,8 +32,10 @@ class Principal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Boton(
-                        presionado: () => navegar(context, 'GuaraniEspanhol'),
-                        titulo: "Guaranigui castellanope")
+                      presionado: () => navegar(context, 'GuaraniEspanhol'),
+                      titulo: "Guaranigui castellanope",
+                      semantica: 'Traducir de guarani a castellano',
+                    )
                   ],
                 ),
                 Container(height: distancia),
@@ -39,8 +43,10 @@ class Principal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Boton(
-                        presionado: () => navegar(context, 'Numeros'),
-                        titulo: "Numeros/Papaha")
+                      presionado: () => navegar(context, 'Numeros'),
+                      titulo: "Numeros/Papaha",
+                      semantica: 'Numeros en guarani y castellano',
+                    )
                   ],
                 ),
                 Container(height: distancia),
@@ -48,8 +54,10 @@ class Principal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Boton(
-                        presionado: () => navegar(context, "Frases"),
-                        titulo: "Frases")
+                      presionado: () => navegar(context, "Frases"),
+                      titulo: "Frases",
+                      semantica: 'frases diarias',
+                    )
                   ],
                 ),
                 Container(height: distancia),
@@ -57,8 +65,10 @@ class Principal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Boton(
-                        presionado: () => navegar(context, 'Sugerencia'),
-                        titulo: "Sugerencias/Ñembohape")
+                      presionado: () => navegar(context, 'Sugerencia'),
+                      titulo: "Sugerencias/Ñembohape",
+                      semantica: 'Enviar sugerencias',
+                    )
                   ],
                 ),
                 Container(height: distancia),

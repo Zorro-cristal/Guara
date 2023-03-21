@@ -71,6 +71,7 @@ class _SugerenciaState extends State<Sugerencia> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Asunto',
+                    hintText: 'Ingrese el asunto del correo'
                   ),
                 )
               ),),
@@ -85,6 +86,7 @@ class _SugerenciaState extends State<Sugerencia> {
                     decoration: InputDecoration(
                       labelText: 'Mensaje',
                       border: OutlineInputBorder(),
+                      hintText: 'Ingrese el mensaje del correo'
                     ),
                   )
                 )
