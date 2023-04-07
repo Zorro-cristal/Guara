@@ -1,7 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:guara/layout/boton.dart';
 import 'package:guara/rutas/rutas.dart';
 import 'package:guara/styles/fondo_pantalla.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Principal extends StatelessWidget {
   const Principal({super.key});
@@ -72,6 +74,26 @@ class Principal extends StatelessWidget {
                   ],
                 ),
                 Container(height: distancia),
+                Center(
+                  child: Text.rich(TextSpan(
+                    style: TextStyle(fontSize: 20),
+                    children: [
+                      TextSpan(
+                        text: 'Politica de privacidad',
+                        style: TextStyle(color: Colors.blue),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () async {
+                            const url = 'https://1drv.ms/b/s!An07D-r-noDVyU8gzUQXc4Voz-g5?e=kGGdRK';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            } else {
+                              throw 'No se pudo lanzar $url';
+                            }
+                          },
+                      ),
+                    ]
+                  )),
+                )
               ],
             )),
       ),
