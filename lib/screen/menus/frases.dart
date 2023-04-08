@@ -41,7 +41,7 @@ class Frases extends StatelessWidget {
               children: [
                 Boton(
                     presionado: () => navegar(context, "Cortesia"),
-                    titulo: "Costesia",
+                    titulo: "Cortesia",
                     semantica: 'Frases de cortesia',),
               ],
             ),
